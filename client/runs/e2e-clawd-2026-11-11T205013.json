@@ -1,0 +1,111 @@
+{
+  "cluster": "clawd",
+  "rpc": "https://rpc.clawdchain.trade",
+  "programId": "A5tHHrrXcYaswtqHzh7V711CVNKPt2mLRou5yGy3ADJm",
+  "payer": "6ThLf4zU3HNxrPjNgr9NzSmgxXNEJaagzVUm8gQwBc4K",
+  "steps": [
+    {
+      "label": "init_config (admin = disposable deployer)",
+      "sig": "2BsTqi1ySsWQBiyEYtyvr4QMFGTUaNuqiVuSGgA61aWUwvMBWk8UC4xb7y5nzNwMHW4w2dg1NXVbLPcUKsKVkVq2",
+      "url": "https://explorer.clawdchain.trade/tx/2BsTqi1ySsWQBiyEYtyvr4QMFGTUaNuqiVuSGgA61aWUwvMBWk8UC4xb7y5nzNwMHW4w2dg1NXVbLPcUKsKVkVq2",
+      "lamportsSpent": 6519560
+    },
+    {
+      "label": "admin_set_allowlist[0] percolator 6Grr3eyuJVME5gDbeT6g6Q3pojQGSuSDaEmHDM7QYhzx",
+      "sig": "5yYWML5Q3WMGNR2zk9iZ5A1ofYhompcx45nv4BxJgneBM9qq4d3BMkNw754eCVC2JuwzqdAK2vsK23V5xkp5agoN",
+      "url": "https://explorer.clawdchain.trade/tx/5yYWML5Q3WMGNR2zk9iZ5A1ofYhompcx45nv4BxJgneBM9qq4d3BMkNw754eCVC2JuwzqdAK2vsK23V5xkp5agoN",
+      "lamportsSpent": 5000
+    },
+    {
+      "label": "mint test Core agent asset",
+      "sig": "3KHMyEyaaLu9eHTJqn9Ax9sXGiNTViqdMREApzV5e9MjNVxNbrMrTBGwDxFHPkEKNqCqAjVr4sPBpojD2PheHWcv",
+      "url": "https://explorer.clawdchain.trade/tx/3KHMyEyaaLu9eHTJqn9Ax9sXGiNTViqdMREApzV5e9MjNVxNbrMrTBGwDxFHPkEKNqCqAjVr4sPBpojD2PheHWcv",
+      "lamportsSpent": 3493600
+    },
+    {
+      "label": "pair(spl test mint) owner-direct, primary",
+      "sig": "3HACkn4aKwNcahmkdZyi43NtLdpJmq9o7tdLKj6BarfKnj9XZ9aVnGoUKkWwMg5g8wr5hvV5Vwx4aniPrC1X2ky3",
+      "url": "https://explorer.clawdchain.trade/tx/3HACkn4aKwNcahmkdZyi43NtLdpJmq9o7tdLKj6BarfKnj9XZ9aVnGoUKkWwMg5g8wr5hvV5Vwx4aniPrC1X2ky3",
+      "lamportsSpent": 3568520
+    },
+    {
+      "label": "pair(percolator CLAWD-PERP (clawd chain wrapper)) via Core execute asset-signer",
+      "sig": "MAq93dFtfne2tE2igcoXif2KPUguBUogE7rkpASA2gATxaSvvsaFk64aAYkED6dTqgdbxPE4S552es2tyCcwvVy",
+      "url": "https://explorer.clawdchain.trade/tx/MAq93dFtfne2tE2igcoXif2KPUguBUogE7rkpASA2gATxaSvvsaFk64aAYkED6dTqgdbxPE4S552es2tyCcwvVy",
+      "lamportsSpent": 2392280
+    },
+    {
+      "label": "lock(percolator pairing)",
+      "sig": "4pWHt5o5dv6jtLZJkQA9Me6zoT5vzcvsZTMu5MBq4n3tMm8TxAowViqqgmjLzecBd4qYKUPz2kjaTEG5fiGbBZFE",
+      "url": "https://explorer.clawdchain.trade/tx/4pWHt5o5dv6jtLZJkQA9Me6zoT5vzcvsZTMu5MBq4n3tMm8TxAowViqqgmjLzecBd4qYKUPz2kjaTEG5fiGbBZFE",
+      "lamportsSpent": 5000
+    },
+    {
+      "label": "unpair(locked percolator pairing) rejected",
+      "simulated": true,
+      "expectedError": "PairingLocked",
+      "got": "{\"InstructionError\":[0,{\"Custom\":10}]}",
+      "pass": true
+    },
+    {
+      "label": "pair(spl) with wrong kind on a Percolator slab rejected",
+      "simulated": true,
+      "expectedError": "TargetOwnerMismatch",
+      "got": "{\"InstructionError\":[0,{\"Custom\":6}]}",
+      "pass": true
+    },
+    {
+      "label": "pair(other: registry config account) [UNVERIFIED]",
+      "sig": "2gFyr3RiqfaPTefcM6qypSMrDauBpVyAfcQjfPi47ikw7mw2hyh6eNQGoQnm4GZNQkpJAbHyGtQqno1zLJBJXkQC",
+      "url": "https://explorer.clawdchain.trade/tx/2gFyr3RiqfaPTefcM6qypSMrDauBpVyAfcQjfPi47ikw7mw2hyh6eNQGoQnm4GZNQkpJAbHyGtQqno1zLJBJXkQC",
+      "lamportsSpent": 2343560
+    },
+    {
+      "label": "unpair(other) -> rent refunded",
+      "sig": "572vsgXJTH8pKSEmbHCTUQfQ724gkDb48J2RFVW8Kw6rJ5on598NhcHa3UFWEoDa57zXMyHYw897niBBrnNF3FJi",
+      "url": "https://explorer.clawdchain.trade/tx/572vsgXJTH8pKSEmbHCTUQfQ724gkDb48J2RFVW8Kw6rJ5on598NhcHa3UFWEoDa57zXMyHYw897niBBrnNF3FJi",
+      "lamportsSpent": -2333560
+    }
+  ],
+  "genesis": "BjbvUdJLreJzCfVEQZHi3D4QttNyp3P5mNXEvHw56kBP",
+  "asset": "zDJgSKAYiJcJD7nKyHdUmKUJ1W37ABcRyz3MN41qgAR",
+  "assetSigner": "6uwxFZAwtVKZdnqUyyA2AyqJAbWuiqAbeiGrEWvjqbFq",
+  "testMint": "4ZnWfakMkf8eNhu2EDH3t3SSZNwPie42kLRoBX4Jq4J5",
+  "primary": "APKfY894yd1gVjCeCbPr9TNvYzFA6FFWDWDEf2RNjebg",
+  "pairings": [
+    {
+      "kind": "spl",
+      "target": "4ZnWfakMkf8eNhu2EDH3t3SSZNwPie42kLRoBX4Jq4J5",
+      "resolved_mint": "4ZnWfakMkf8eNhu2EDH3t3SSZNwPie42kLRoBX4Jq4J5",
+      "registry": "A5tHHrrXcYaswtqHzh7V711CVNKPt2mLRou5yGy3ADJm",
+      "pairing": "APKfY894yd1gVjCeCbPr9TNvYzFA6FFWDWDEf2RNjebg",
+      "cluster": "clawd-chain",
+      "primary": true,
+      "locked": false,
+      "flags": 6,
+      "viaAssetSigner": false,
+      "verifiedMint": true,
+      "setBy": "6ThLf4zU3HNxrPjNgr9NzSmgxXNEJaagzVUm8gQwBc4K",
+      "targetProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "slot": "8715471"
+    },
+    {
+      "kind": "percolator-market",
+      "target": "Ha2RECxyaKvXNA5KuoLxvJpEQGGdMmn3xBP4FdJQvSb5",
+      "resolved_mint": "11111111111111111111111111111111",
+      "registry": "A5tHHrrXcYaswtqHzh7V711CVNKPt2mLRou5yGy3ADJm",
+      "pairing": "5hP85w8E9LPMRSRLTmCUhJJ4mn6RJUt8diXeDeJBBVs2",
+      "cluster": "clawd-chain",
+      "primary": false,
+      "locked": true,
+      "flags": 17,
+      "viaAssetSigner": true,
+      "verifiedMint": false,
+      "setBy": "6uwxFZAwtVKZdnqUyyA2AyqJAbWuiqAbeiGrEWvjqbFq",
+      "targetProgram": "6Grr3eyuJVME5gDbeT6g6Q3pojQGSuSDaEmHDM7QYhzx",
+      "slot": "8715476"
+    }
+  ],
+  "otherClosed": true,
+  "endBalance": 68550832480
+}

@@ -1,0 +1,22 @@
+[package]
+name = "percolator_agent_registry"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Open agent <-> token/market pairing registry for Metaplex Core agent assets (clean-room, $CLAWD ecosystem)"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[features]
+default = []
+no-entrypoint = []
+
+[dependencies]
+pinocchio = { version = "0.12", default-features = false, features = ["copy", "cpi"] }
+pinocchio-system = "0.7"
+
+[lints.rust.unexpected_cfgs]
+level = "warn"
+check-cfg = ['cfg(target_os, values("solana"))']
+

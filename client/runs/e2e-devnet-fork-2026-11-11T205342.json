@@ -1,0 +1,111 @@
+{
+  "cluster": "devnet-fork",
+  "rpc": "http://127.0.0.1:18899",
+  "programId": "A5tHHrrXcYaswtqHzh7V711CVNKPt2mLRou5yGy3ADJm",
+  "payer": "6ThLf4zU3HNxrPjNgr9NzSmgxXNEJaagzVUm8gQwBc4K",
+  "steps": [
+    {
+      "label": "init_config (admin = disposable deployer)",
+      "sig": "3dF8MQszinrKyijnTzukc51aiD2KvBgkzQepgss2t9k9MSpTVftQXCvovqoCzb4toBxRNVvHjdaQ5wpVmWbiVyWe",
+      "url": "local:tx/3dF8MQszinrKyijnTzukc51aiD2KvBgkzQepgss2t9k9MSpTVftQXCvovqoCzb4toBxRNVvHjdaQ5wpVmWbiVyWe",
+      "lamportsSpent": 6519560
+    },
+    {
+      "label": "admin_set_allowlist[0] percolator Anw121Fk3gKvUHXk938cY2xVb9Eq46WX3k15WESS49PA",
+      "sig": "523GMKvY67WDurk5qHBsSo2PZ6FMTFWfyUjFPtcTNuXqMTZEv1p6DTA7N8WcKzN5fwwsf1qp2rsZ9stemLhzok3F",
+      "url": "local:tx/523GMKvY67WDurk5qHBsSo2PZ6FMTFWfyUjFPtcTNuXqMTZEv1p6DTA7N8WcKzN5fwwsf1qp2rsZ9stemLhzok3F",
+      "lamportsSpent": 5000
+    },
+    {
+      "label": "mint test Core agent asset",
+      "sig": "DiJjySpsS85j43YtupjjokrnyqjScc7cWirpVbZCHXnwrgrxwMrAPvuLbTPK2uyKLn1bVBakXW8B8xMFzAtDNco",
+      "url": "local:tx/DiJjySpsS85j43YtupjjokrnyqjScc7cWirpVbZCHXnwrgrxwMrAPvuLbTPK2uyKLn1bVBakXW8B8xMFzAtDNco",
+      "lamportsSpent": 3493600
+    },
+    {
+      "label": "pair(spl test mint) owner-direct, primary",
+      "sig": "5MDoeDMdeYXPmo7dvfcShFeCynSeDrYHQvyPYe5MMcHf6rHBB5VjSi7Y6ZZ2MyHx4PS5e8Zgv2HjY9xRVdBKSsHQ",
+      "url": "local:tx/5MDoeDMdeYXPmo7dvfcShFeCynSeDrYHQvyPYe5MMcHf6rHBB5VjSi7Y6ZZ2MyHx4PS5e8Zgv2HjY9xRVdBKSsHQ",
+      "lamportsSpent": 3568520
+    },
+    {
+      "label": "pair(percolator CLAWD10K-PERP (devnet slab cloned into local validator)) via Core execute asset-signer",
+      "sig": "5LbdaRhqzXEwKwMquzLVWfQU1RBbE2opr2DtjWZSL2gj1mQaNZdRGsoXP1CPMDAhXvSbQ3i7jGjuXQYrFR6qVnvq",
+      "url": "local:tx/5LbdaRhqzXEwKwMquzLVWfQU1RBbE2opr2DtjWZSL2gj1mQaNZdRGsoXP1CPMDAhXvSbQ3i7jGjuXQYrFR6qVnvq",
+      "lamportsSpent": 2392280
+    },
+    {
+      "label": "lock(percolator pairing)",
+      "sig": "3yRLZEncd2moe6ksmq3TBRWnq6Ru2Uh5wxFqgNyu4qhzkmBUaSXpKX4rt4RtSfPbTmyfqf97rsWpidh9jgDjeWnV",
+      "url": "local:tx/3yRLZEncd2moe6ksmq3TBRWnq6Ru2Uh5wxFqgNyu4qhzkmBUaSXpKX4rt4RtSfPbTmyfqf97rsWpidh9jgDjeWnV",
+      "lamportsSpent": 5000
+    },
+    {
+      "label": "unpair(locked percolator pairing) rejected",
+      "simulated": true,
+      "expectedError": "PairingLocked",
+      "got": "{\"InstructionError\":[0,{\"Custom\":10}]}",
+      "pass": true
+    },
+    {
+      "label": "pair(spl) with wrong kind on a Percolator slab rejected",
+      "simulated": true,
+      "expectedError": "TargetOwnerMismatch",
+      "got": "{\"InstructionError\":[0,{\"Custom\":6}]}",
+      "pass": true
+    },
+    {
+      "label": "pair(other: registry config account) [UNVERIFIED]",
+      "sig": "32w6muvUUTm9SPNL2LE1upHwYsTUFtXXKsDdYZJWt8zqGYdBBA2UpS38EVhKcgopDT5YxccGWzo6cP6hNxLXTF13",
+      "url": "local:tx/32w6muvUUTm9SPNL2LE1upHwYsTUFtXXKsDdYZJWt8zqGYdBBA2UpS38EVhKcgopDT5YxccGWzo6cP6hNxLXTF13",
+      "lamportsSpent": 2343560
+    },
+    {
+      "label": "unpair(other) -> rent refunded",
+      "sig": "5PCp618uZLeQiFYw15YCQFgL1HeCEnENjpyz2qeioB7Y9W5ccVcW5grybZZKmYHwWy8WHqqaoCoiU18TbM99vWmu",
+      "url": "local:tx/5PCp618uZLeQiFYw15YCQFgL1HeCEnENjpyz2qeioB7Y9W5ccVcW5grybZZKmYHwWy8WHqqaoCoiU18TbM99vWmu",
+      "lamportsSpent": -2333560
+    }
+  ],
+  "genesis": "Ey1QRQJyn9JnoVzxBdnMBbAAXxAa4PcBggU2RH8RiQdv",
+  "asset": "J9oF2w9dPBh78uY3pdB5Pe63yLmS8uQvpKEFJDuD2kGc",
+  "assetSigner": "9juDPd364mWmox6YnroWxyFsjzX512nV6dGUJgeFacvw",
+  "testMint": "EjK91TvVZmuumbnYWA5unByda8iusYrDhZvXVsadmXRx",
+  "primary": "Hxa2p5yB52Bjbz2T2qamB1sPtFJ2ngUepoDf2UPp6exS",
+  "pairings": [
+    {
+      "kind": "spl",
+      "target": "EjK91TvVZmuumbnYWA5unByda8iusYrDhZvXVsadmXRx",
+      "resolved_mint": "EjK91TvVZmuumbnYWA5unByda8iusYrDhZvXVsadmXRx",
+      "registry": "A5tHHrrXcYaswtqHzh7V711CVNKPt2mLRou5yGy3ADJm",
+      "pairing": "Hxa2p5yB52Bjbz2T2qamB1sPtFJ2ngUepoDf2UPp6exS",
+      "cluster": "local-devnet-fork",
+      "primary": true,
+      "locked": false,
+      "flags": 6,
+      "viaAssetSigner": false,
+      "verifiedMint": true,
+      "setBy": "6ThLf4zU3HNxrPjNgr9NzSmgxXNEJaagzVUm8gQwBc4K",
+      "targetProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "slot": "126"
+    },
+    {
+      "kind": "percolator-market",
+      "target": "7KgTRxE14Rii5kR7YpPuCfKKQSceXoZNorhMtunRJDy3",
+      "resolved_mint": "CTjhnHRb85g9m3LwZpfPKkoteKeFZcuX7VHfKeCVFxmW",
+      "registry": "A5tHHrrXcYaswtqHzh7V711CVNKPt2mLRou5yGy3ADJm",
+      "pairing": "5qD8rUWRmmxxRfQ8Jtio4mfYePou1YZnzReSXZwEiCUE",
+      "cluster": "local-devnet-fork",
+      "primary": false,
+      "locked": true,
+      "flags": 17,
+      "viaAssetSigner": true,
+      "verifiedMint": false,
+      "setBy": "9juDPd364mWmox6YnroWxyFsjzX512nV6dGUJgeFacvw",
+      "targetProgram": "Anw121Fk3gKvUHXk938cY2xVb9Eq46WX3k15WESS49PA",
+      "slot": "128"
+    }
+  ],
+  "otherClosed": true,
+  "endBalance": 4982534440
+}

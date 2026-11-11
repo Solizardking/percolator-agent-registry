@@ -1,0 +1,24 @@
+{
+  "name": "@percolator/agent-registry",
+  "version": "0.1.0",
+  "description": "TypeScript client for the Percolator open agent <-> token/market pairing registry ($CLAWD ecosystem). Unaudited; devnet/clawd chain only.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "tsx --test test/*.test.ts",
+    "e2e": "tsx scripts/e2e.ts"
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.4.15",
+    "@solana/web3.js": "^1.99.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}
