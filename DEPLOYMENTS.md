@@ -90,3 +90,8 @@ REGISTRY_KEYPAIR=/tmp/par-keys/deployer.json CLUSTER=devnet npx tsx client/scrip
 registry loaded at the same program ID with the disposable upgrade authority. Same e2e script, all steps passed
 (`client/runs/e2e-devnet-fork-2026-11-11T205342.json`): init_config, allowlist `Anw121…` ("PERCOLAT" @0), mint test Core asset, create test SPL mint, pair SPL (owner-direct, primary),
 pair the devnet Percolator slab through Core Execute (asset-signer PDA, VIA_ASSET_SIGNER flag set), lock, locked-unpair rejected (10), wrong-kind rejected (6), pair Other + unpair refund.
+
+## Mainnet: NOT deployed (needs dev's explicit yes, upgrade-key plan and audit)
+Rent figures come from live mainnet `getMinimumBalanceForRentExemption` for the real 30,832-byte binary (2026-11-11):
+ProgramData at 2× headroom (61,709 B) = 0.31413196 SOL. At 1× (30,877 B) = 0.1575054 SOL. Program account = 0.00083312. Config = 0.00475488. Writes ≈ 0.00016.
+**Locked total ≈ 0.3199 SOL (2×) or ≈ 0.164 SOL (1×)**, plus ≈ 0.157 SOL that the deploy buffer holds briefly and then refunds. Each pairing is 0.00170688 SOL; a primary pointer is 0.00089408.
